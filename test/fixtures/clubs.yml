@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  hurling: false
+  football: false
+
+two:
+  name: MyString
+  hurling: false
+  football: false

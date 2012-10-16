@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  about: MyText
+  football: false
+  hurling: false
+  profileable_id: 1
+  profileable_type: MyString
+
+two:
+  about: MyText
+  football: false
+  hurling: false
+  profileable_id: 1
+  profileable_type: MyString

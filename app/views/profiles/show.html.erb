@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>About:</b>
+  <%= @profile.about %>
+</p>
+
+<p>
+  <b>Football:</b>
+  <%= @profile.football %>
+</p>
+
+<p>
+  <b>Hurling:</b>
+  <%= @profile.hurling %>
+</p>
+
+<p>
+  <b>Profileable:</b>
+  <%= @profile.profileable_id %>
+</p>
+
+<p>
+  <b>Profileable type:</b>
+  <%= @profile.profileable_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
