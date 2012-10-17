@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>15 a side</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -7,8 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">15 a-side</a>
+			<% unless session[:user_id] %>
+		  		<%= form_tag(sessions_path,:method=>"post", :class=>"navbar-form pull-right") do %>
+					<%= text_field_tag :username, nil,:placeholder => "username" %>
+					<%= password_field_tag :password,nil, :placeholder => "password" %>
+					<%= submit_tag "login" %>
+				<% end %>
+			<% end %>
+        </div>
+      </div>
+    </div>
 
-<%= yield %>
+    <div class="container">
+		<%= yield %>
+    </div> <!-- /container -->
+	<div id="footer">
+		
+	</div>
 
 </body>
 </html>
