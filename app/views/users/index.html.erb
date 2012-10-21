@@ -1,14 +1,14 @@
 <h1>Listing users</h1>
-
+<p id="notice"><%= notice %></p>
 <table>
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
+    <th></th>
+    <th></th>
     <th>Email</th>
-    <th>Facebook</th>
-    <th>Password digest</th>
+    <th></th>
+    <th></th>
     <th>Username</th>
-    <th>Last login</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,13 +16,8 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.firstname %></td>
-    <td><%= user.lastname %></td>
     <td><%= user.email %></td>
-    <td><%= user.facebook_id %></td>
-    <td><%= user.password_digest %></td>
     <td><%= user.username %></td>
-    <td><%= user.last_login %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
