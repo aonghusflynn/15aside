@@ -30,7 +30,7 @@
         <div class="container">
           <a class="brand" href="/">15 a-side</a>
 			<% unless session[:user_id] %>
-		  		<%= form_tag(sessions_path,:method=>"post", :class=>"navbar-form pull-right") do %>
+		  		<%= form_tag(user_sessions_path,:method=>"post", :class=>"navbar-form pull-right") do %>
 					<%= text_field_tag :username, nil,:placeholder => "username" %>
 					<%= password_field_tag :password,nil, :placeholder => "password" %>
 					<%= submit_tag "login" %>

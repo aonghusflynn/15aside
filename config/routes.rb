@@ -7,9 +7,14 @@ Fifteenaside::Application.routes.draw do
 
   resources :venues
 
-  resources :users
+  resources :users, :user_sessions
 
   resource :sessions
+  
+  
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
