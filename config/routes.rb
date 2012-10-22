@@ -1,4 +1,8 @@
 Fifteenaside::Application.routes.draw do
+  devise_for :users
+
+  get "home/index"
+
   resources :counties
 
   resources :clubs
@@ -7,13 +11,8 @@ Fifteenaside::Application.routes.draw do
 
   resources :venues
 
-  resources :users, :user_sessions
+  resources :users
 
-  resource :sessions
-  
-  
-  match 'login' => 'user_sessions#new', :as => :login
-  match 'logout' => 'user_sessions#destroy', :as => :logout
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,7 +63,7 @@ Fifteenaside::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'sessions#new'
+   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

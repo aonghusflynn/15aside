@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  before_filter :check_authentication, :except=>[:new, :show, :index]
+
   
   def check_authentication
     unless session[:user_id]

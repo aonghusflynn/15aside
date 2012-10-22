@@ -25,12 +25,15 @@
 
 </head>
 <body class="<%= controller.controller_name %>">
+	
+	  <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="/">15 a-side</a>
 			<% unless session[:user_id] %>
-		  		<%= form_tag(user_sessions_path,:method=>"post", :class=>"navbar-form pull-right") do %>
+		  		<%= form_tag(new_user_session_path,:method=>"post", :class=>"navbar-form pull-right") do %>
 					<%= text_field_tag :username, nil,:placeholder => "username" %>
 					<%= password_field_tag :password,nil, :placeholder => "password" %>
 					<%= submit_tag "login" %>
@@ -41,15 +44,6 @@
     </div>
    
     <div class="container clearfix margin-top-160">
-	  <div id="nav">
-	        <% if current_user %>
-	        <%= link_to "Edit Profile", edit_user_path(current_user.id)%>
-	        <%= link_to "Logout", :logout%>
-	        <% else %>
-	        <%= link_to "Register", new_user_path%> | 
-	        <%= link_to "Login", :login %>
-	        <% end %>
-	    </div>
 	
 		<%= yield %>
     </div> <!-- /container -->

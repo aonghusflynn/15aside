@@ -10,10 +10,8 @@ gem 'sqlite3'
 gem 'aws-sdk'
 gem 'aws-s3'
 gem "paperclip", "~> 3.0"
-
 gem 'less-rails-bootstrap'
-
-gem 'authlogic'
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
